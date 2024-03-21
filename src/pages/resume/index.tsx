@@ -1,7 +1,10 @@
 import { NextPage } from "next";
+import dynamic from "next/dynamic";
+
+const Resume = dynamic(() => import("@/components/pages/resume").then((module) => module.Resume));
 
 const ResumePage: NextPage = () => {
-  return <div>resume page 11111</div>;
+  return <Resume />;
 };
 
 export default ResumePage;
