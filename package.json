@@ -2,7 +2,7 @@
   "name": "dahun428-fx.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dahun428-fx.github.io/resume",
+  "homepage": "https://dahun428-fx.github.io/resume",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
