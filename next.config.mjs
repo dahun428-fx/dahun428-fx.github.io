@@ -9,5 +9,5 @@ const nextConfig = {
   output: "export",
   basePath: !debug ? `/${repository}` : "",
 };
-
+ 
 export default nextConfig;
