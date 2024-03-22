@@ -1,14 +1,19 @@
 import { BriefTop } from "./BriefTop";
+import { Education } from "./Education";
+import { Experience } from "./Experience";
 import { Introduce } from "./Introduce";
+import { Project } from "./Project";
 import { Skills } from "./Skills/Skills";
 
 export const Resume: React.FC = () => {
   return (
     <div>
-      <h1>hello this is resume</h1>
       <BriefTop />
       <Introduce />
       <Skills />
+      <Experience />
+      <Project />
+      <Education />
     </div>
   );
 };

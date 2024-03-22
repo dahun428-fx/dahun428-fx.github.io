@@ -1,0 +1,25 @@
+@import "./variables";
+
+@mixin smallest {
+  @media (min-width: #{$breakpoint-smallest}) and (max-width: #{$breakpoint-small - 1px}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: #{$breakpoint-small}) and (max-width: #{$breakpoint-medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-wide - 1px}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$breakpoint-wide}) {
+    @content;
+  }
+}

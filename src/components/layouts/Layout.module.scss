@@ -1,0 +1,38 @@
+@import "../../styles/mixins";
+
+.layout {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  word-wrap: break-word;
+  word-break: keep-all;
+  line-height: 1.8;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main {
+  padding: 16px 10px 80px;
+}
+@include wide {
+  .layout {
+    max-width: 1140px;
+  }
+}
+@include medium {
+  .layout {
+    max-width: 960px;
+  }
+}
+@include small {
+  .layout {
+    max-width: 720px;
+  }
+}
+@include smallest {
+  .layout {
+    max-width: 540px;
+  }
+}

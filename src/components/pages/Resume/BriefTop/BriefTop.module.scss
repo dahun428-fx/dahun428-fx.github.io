@@ -1,0 +1,28 @@
+@import "../../../../styles/mixins";
+
+.name {
+  color: #3c78d8;
+}
+.container {
+  a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
+
+@include medium {
+  .nameWrap {
+    text-align: left;
+  }
+}
+@include small {
+  .nameWrap {
+    text-align: center;
+  }
+}
+@include smallest {
+  .nameWrap {
+    text-align: center;
+  }
+}
