@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { AppPropsWithLayout } from "./types";
+import { AppPropsWithLayout } from "../types/types";
 import { AppProps } from "next/app";
 import { Standard } from "@/layouts/standard";
 import "bootstrap/dist/css/bootstrap.min.css";
