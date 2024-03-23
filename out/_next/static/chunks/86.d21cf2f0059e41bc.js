@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[86],{6086:function(e,n,s){s.r(n),s.d(n,{Home:function(){return i}});var h=s(5893);let i=()=>(0,h.jsx)("div",{children:"hello this is home"})}}]);
