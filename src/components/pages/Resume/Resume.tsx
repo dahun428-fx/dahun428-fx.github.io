@@ -5,14 +5,17 @@ import { Introduce } from "./Introduce";
 import { Project } from "./Project";
 import { Skills } from "./Skills/Skills";
 
+import { projectData } from "@/data/project/default";
+import { profileData } from "@/data/profile/default";
+
 export const Resume: React.FC = () => {
   return (
     <div>
-      <BriefTop />
+      <BriefTop profile={profileData} />
       <Introduce />
       <Skills />
       <Experience />
-      <Project />
+      <Project projects={projectData} />
       <Education />
     </div>
   );
