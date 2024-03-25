@@ -7,6 +7,7 @@ import { Skills } from "./Skills/Skills";
 
 import { projectData } from "@/data/project/default";
 import { profileData } from "@/data/profile/default";
+import { experienceData } from "@/data/experience/default";
 
 export const Resume: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ export const Resume: React.FC = () => {
       <BriefTop profile={profileData} />
       <Introduce />
       <Skills />
-      <Experience />
+      <Experience experiences={experienceData} />
       <Project projects={projectData} />
       <Education />
     </div>

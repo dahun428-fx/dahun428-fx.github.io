@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { Badge as BootBadge } from "react-bootstrap";
 
 export const BadgeThemes = ["primary", "secondary", "success", "danger", "warning", "info", "light", "dark"] as const;
@@ -9,42 +10,47 @@ type Props = {
   content: string;
   theme?: Theme;
   size?: size;
+  className?: string;
 };
-export const Badge: React.FC<Props> = ({ content, theme = "primary", size = "h1" }) => {
+export const Badge: React.FC<Props> = ({ content, theme = "primary", size = "h1", className }) => {
   if (size === "h1") {
     return (
-      <h1>
-        <BootBadge bg={theme}>{content}</BootBadge>
-      </h1>
+      <BootBadge style={{ fontSize: "32px" }} className={classNames(className)} bg={theme}>
+        {content}
+      </BootBadge>
     );
   } else if (size === "h2") {
     return (
-      <h2>
-        <BootBadge bg={theme}>{content}</BootBadge>
-      </h2>
+      <BootBadge style={{ fontSize: "24px" }} className={className} bg={theme}>
+        {content}
+      </BootBadge>
     );
   } else if (size === "h3") {
     return (
-      <h3>
-        <BootBadge bg={theme}>{content}</BootBadge>
-      </h3>
+      <BootBadge style={{ fontSize: "20px" }} className={className} bg={theme}>
+        {content}
+      </BootBadge>
     );
   } else if (size === "h4") {
     return (
-      <h4>
-        <BootBadge bg={theme}>{content}</BootBadge>
-      </h4>
+      <BootBadge style={{ fontSize: "16px" }} className={className} bg={theme}>
+        {content}
+      </BootBadge>
     );
   } else if (size === "h5") {
     return (
       <h5>
-        <BootBadge bg={theme}>{content}</BootBadge>
+        <BootBadge style={{ fontSize: "12px" }} className={className} bg={theme}>
+          {content}
+        </BootBadge>
       </h5>
     );
   } else {
     return (
       <h6>
-        <BootBadge bg={theme}>{content}</BootBadge>
+        <BootBadge style={{ fontSize: "8px" }} className={className} bg={theme}>
+          {content}
+        </BootBadge>
       </h6>
     );
   }
