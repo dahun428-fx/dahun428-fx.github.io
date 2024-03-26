@@ -37,7 +37,7 @@ export const BriefTop: React.FC<Props> = ({ profile }) => {
                   contact.length > 0 &&
                   contact.map((item, index) => {
                     return (
-                      <Row className="pb-2">
+                      <Row className="pb-2" key={index}>
                         <div className="col-1 text-right">
                           <FontAwesomeIcon icon={item.icon} />
                         </div>

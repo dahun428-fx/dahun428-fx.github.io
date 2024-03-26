@@ -2,6 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import styles from "./CommonRow.module.scss";
 import { commonRow } from "@/models/common/common";
 import { CommonDescription } from "../Descriptions/CommonDescription";
+import { v4 } from "uuid";
 
 type Props = {
   row: commonRow;
@@ -12,6 +13,8 @@ export const CommonRow: React.FC<Props> = ({ row }) => {
   const option = {
     padding: !!(rightTitle || rightSubTitle),
   };
+
+  const id = v4();
 
   return (
     <div>
@@ -28,7 +31,7 @@ export const CommonRow: React.FC<Props> = ({ row }) => {
         <Col sm={12} md={9}>
           {rightTitle && <h4>{rightTitle}</h4>}
           {rightSubTitle && <i className={styles.gray}>{rightSubTitle}</i>}
-          {rightDescriptions && <CommonDescription descriptions={rightDescriptions} option={option} />}
+          {rightDescriptions && <CommonDescription descriptions={rightDescriptions} option={option} key={`${index}_${id}`} index={index} />}
         </Col>
       </Row>
     </div>

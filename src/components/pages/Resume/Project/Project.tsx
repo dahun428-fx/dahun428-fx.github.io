@@ -5,6 +5,7 @@ import { commonRow } from "@/models/common/common";
 import { project } from "@/models/project";
 import { config } from "../../../../../config/config";
 import dayjs from "dayjs";
+import { duration } from "dayjs";
 
 type Props = {
   projects: project[];
@@ -17,7 +18,10 @@ const serialize = (payload: project): commonRow => {
   const _title = (() => {
     if (payload.endedAt) {
       const end = dayjs(endedAt).format(DATE_FORMAT);
-      return `${start} ~ ${end}`;
+      dayjs.extend(duration);
+      // const diff = Math.floor(dayjs(endedAt).diff(startedAt) / 1000 / 60 / 60 / 24);
+      const diff = dayjs.duration(dayjs(endedAt).diff(startedAt)).years() * 12 + dayjs.duration(dayjs(endedAt).diff(startedAt)).months();
+      return `${start} ~ ${end} ( ${diff}개월 )`;
     }
     return `${startedAt} ~`;
   })();
@@ -38,7 +42,7 @@ export const Project: React.FC<Props> = ({ projects }) => {
         {projects &&
           projects.length > 0 &&
           projects.map((item, index) => {
-            return <CommonRow row={serialize(item)} />;
+            return <CommonRow row={serialize(item)} key={index} />;
           })}
       </EmptyRowCol>
     </CommonSection>

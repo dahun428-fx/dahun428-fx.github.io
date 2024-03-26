@@ -15,43 +15,39 @@ type Props = {
 export const Badge: React.FC<Props> = ({ content, theme = "primary", size = "h1", className }) => {
   if (size === "h1") {
     return (
-      <BootBadge style={{ fontSize: "32px" }} className={classNames(className)} bg={theme}>
+      <BootBadge style={{ fontSize: "32px", margin: "0.3em" }} className={classNames(className)} bg={theme}>
         {content}
       </BootBadge>
     );
   } else if (size === "h2") {
     return (
-      <BootBadge style={{ fontSize: "24px" }} className={className} bg={theme}>
+      <BootBadge style={{ fontSize: "24px", margin: "0.3em" }} className={className} bg={theme}>
         {content}
       </BootBadge>
     );
   } else if (size === "h3") {
     return (
-      <BootBadge style={{ fontSize: "20px" }} className={className} bg={theme}>
+      <BootBadge style={{ fontSize: "20px", margin: "0.3em" }} className={className} bg={theme}>
         {content}
       </BootBadge>
     );
   } else if (size === "h4") {
     return (
-      <BootBadge style={{ fontSize: "16px" }} className={className} bg={theme}>
+      <BootBadge style={{ fontSize: "18px", margin: "0.3em" }} className={className} bg={theme}>
         {content}
       </BootBadge>
     );
   } else if (size === "h5") {
     return (
-      <h5>
-        <BootBadge style={{ fontSize: "12px" }} className={className} bg={theme}>
-          {content}
-        </BootBadge>
-      </h5>
+      <BootBadge style={{ fontSize: "16px", margin: "0.3em" }} className={className} bg={theme}>
+        {content}
+      </BootBadge>
     );
   } else {
     return (
-      <h6>
-        <BootBadge style={{ fontSize: "8px" }} className={className} bg={theme}>
-          {content}
-        </BootBadge>
-      </h6>
+      <BootBadge style={{ fontSize: "12px", margin: "0.3em" }} className={className} bg={theme}>
+        {content}
+      </BootBadge>
     );
   }
 };

@@ -1,44 +1,47 @@
 import { FontWeightType, description } from "@/models/common/common";
-import { CSSProperties } from "react";
+import { CSSProperties, Fragment } from "react";
 import { Anchor } from "../Anchor/Anchor";
+import { v4 } from "uuid";
 
 type Props = {
   descriptions: description[];
   option?: any;
+  index?: number;
 };
 
-export const CommonDescription: React.FC<Props> = ({ descriptions, option }) => {
+export const CommonDescription: React.FC<Props> = ({ descriptions, option, index = 0 }) => {
   const isPadding = option && option?.padding;
-
+  const id = v4();
   return (
-    <>
+    <Fragment key={id}>
       {descriptions && descriptions.length > 0 && (
         <ul className={isPadding && "pt-2"}>
           {descriptions.map((description, descIndex) => {
             return (
-              <>
-                <Description description={description} key={descIndex.toString()} />
-                {description.descriptions ? <DescriptionRecursion descriptions={description.descriptions} key={descIndex.toString()} /> : ""}
-              </>
+              <Fragment key={descIndex.toString()}>
+                <Description description={description} key={`${index.toString()}_${descIndex}_${id}_cur_u`} />
+                {description.descriptions && <DescriptionRecursion descriptions={description.descriptions} key={`${index.toString()}_${descIndex}_${id}_cur_o`} />}
+              </Fragment>
             );
           })}
         </ul>
       )}
-    </>
+    </Fragment>
   );
 };
 
 CommonDescription.displayName = "CommonDescription";
 
-export const DescriptionRecursion: React.FC<Props> = ({ descriptions }) => {
+export const DescriptionRecursion: React.FC<Props> = ({ descriptions, index = 0 }) => {
+  const id = v4();
   return (
-    <ul>
-      {descriptions.map((description, index) => {
+    <ul key={`ul_${index}_${id}`}>
+      {descriptions.map((description, descIndex) => {
         return (
-          <>
-            <Description description={description} key={index.toString()} />
-            {description.descriptions ? <DescriptionRecursion descriptions={description.descriptions} key={index.toString()} /> : ""}
-          </>
+          <Fragment key={`${id}_${index}_${descIndex}`}>
+            <Description description={description} key={`${index.toString()}_${descIndex}_${id}`} />
+            {description.descriptions && <DescriptionRecursion descriptions={description.descriptions} key={`${index.toString()}_${descIndex}_${id}_cur`} />}
+          </Fragment>
         );
       })}
     </ul>
@@ -47,43 +50,45 @@ export const DescriptionRecursion: React.FC<Props> = ({ descriptions }) => {
 
 type DescProps = {
   description: description;
+  index?: number;
 };
 
-export const Description: React.FC<DescProps> = ({ description }) => {
+export const Description: React.FC<DescProps> = ({ description, index }) => {
   const { content, descriptions, href, postHref, postImage, weight } = description;
 
+  const id = v4();
   const component = (() => {
     if (href && postImage) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getFontWeight(weight)} key={`desc_${index}_${id}`}>
           <Anchor url={href} text={content} /> <img src={postImage} alt={postImage} />
         </li>
       );
     }
     if (href) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getFontWeight(weight)} key={`desc_${index}_${id}`}>
           <Anchor url={href} text={content} />
         </li>
       );
     }
     if (postHref && postImage) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getFontWeight(weight)} key={`desc_${index}_${id}`}>
           {content} <Anchor url={postHref} text={postHref} /> <img src={postImage} alt={postImage} />
         </li>
       );
     }
     if (postHref) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getFontWeight(weight)} key={`desc_${index}_${id}`}>
           {content} <Anchor url={postHref} text={postHref} />
         </li>
       );
     }
     if (postImage) {
       return (
-        <li style={getFontWeight(weight)}>
+        <li style={getFontWeight(weight)} key={`desc_${index}_${id}`}>
           {content} <img src={postImage} alt={postImage} />
         </li>
       );
@@ -91,7 +96,9 @@ export const Description: React.FC<DescProps> = ({ description }) => {
     return (
       <>
         <meta name="format-detection" content="telephone=no" />
-        <li style={getFontWeight(weight)}>{content}</li>
+        <li style={getFontWeight(weight)} key={`desc_${index}_${id}`}>
+          {content}
+        </li>
       </>
     );
   })();
