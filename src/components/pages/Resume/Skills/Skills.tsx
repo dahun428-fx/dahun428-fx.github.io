@@ -1,6 +1,4 @@
 import { Col, Row } from "react-bootstrap";
-import { Contents } from "@/components/ui/Contents";
-import { useMemo } from "react";
 import { EmptyRowCol } from "@/components/ui/Common/EmptyRowCol";
 import styles from "./Skills.module.scss";
 import { skill } from "@/models/skill";

@@ -28,22 +28,8 @@ export const Experience: React.FC<Props> = ({ experiences }) => {
   }, [experiences]);
 
   const totalPeriod = useMemo(() => {
-    return <Badge content={getFormattingExperienceTotalDuration()} size="h5" theme="secondary" />;
+    return <Badge content={getFormattingExperienceTotalDuration()} size="h6" theme="secondary" />;
   }, [getFormattingExperienceTotalDuration, experiences]);
-
-  // function getFormattingExperienceTotalDuration(experiences: experience[]) {
-  //   dayjs.extend(duration);
-  //   const durations = experiences.map((item) => {
-  //     const end = dayjs(item.endedAt) ?? dayjs();
-  //     const start = dayjs(item.startedAt);
-  //     return dayjs.duration(end.diff(start));
-  //   });
-
-  //   const diff = durations.reduce((prev, current) => prev + (current.years() * 12 + current.months()), 0);
-  //   const y = Math.floor(diff / 12);
-  //   const m = diff % 12;
-  //   return `총 ${y}년 ${m}개월`;
-  // }
 
   return (
     <section className="mt-5">

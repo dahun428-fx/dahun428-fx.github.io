@@ -19,7 +19,6 @@ export const Introduce: React.FC<Props> = ({ introduceData }) => {
   // const latestFromNow = Math.floor(dayjs(new Date()).diff(latestUpdated));
   const latestFromNow = Math.floor(dayjs(new Date()).diff(dayjs(latestUpdated)) / 1000 / 60 / 60 / 24);
 
-  console.log(latestFromNow);
   return (
     <Contents title="INTRODUCE">
       <>
