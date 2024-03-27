@@ -3,13 +3,14 @@ import styles from "./CommonRow.module.scss";
 import { commonRow } from "@/models/common/common";
 import { CommonDescription } from "../Descriptions/CommonDescription";
 import { v4 } from "uuid";
+import { Badge } from "../../Badge";
 
 type Props = {
   row: commonRow;
 };
 
 export const CommonRow: React.FC<Props> = ({ row }) => {
-  const { index, leftTitle, leftSubTitle, rightDescriptions, rightSubTitle, rightTitle } = row;
+  const { index, leftTitle, leftSubTitle, rightDescriptions, rightSubTitle, rightTitle, rightSkillKeywords, link } = row;
   const option = {
     padding: !!(rightTitle || rightSubTitle),
   };
@@ -31,7 +32,26 @@ export const CommonRow: React.FC<Props> = ({ row }) => {
         <Col sm={12} md={9}>
           {rightTitle && <h4>{rightTitle}</h4>}
           {rightSubTitle && <i className={styles.gray}>{rightSubTitle}</i>}
+          {link && (
+            <a href={link} target="_blank">
+              {link}
+            </a>
+          )}
           {rightDescriptions && <CommonDescription descriptions={rightDescriptions} option={option} key={`${index}_${id}`} index={index} />}
+          {rightSkillKeywords && rightSkillKeywords.length > 0 && (
+            <ul>
+              <li>
+                <strong>스킬키워드</strong>
+                <div>
+                  {rightSkillKeywords &&
+                    rightSkillKeywords.length > 0 &&
+                    rightSkillKeywords.map((item, index) => {
+                      return <Badge key={index} content={item} size="h6" theme="secondary" className="mr-1" />;
+                    })}
+                </div>
+              </li>
+            </ul>
+          )}
         </Col>
       </Row>
     </div>

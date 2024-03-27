@@ -36,7 +36,7 @@ export const Experience: React.FC<Props> = ({ experiences }) => {
       <EmptyRowCol>
         <Row className="pb-3">
           <Col>
-            <h2 className={styles.blue}>EXPERIENCE {totalPeriod}</h2>
+            <h2 className={styles.blue}>경력사항 {totalPeriod}</h2>
           </Col>
         </Row>
         {experiences &&

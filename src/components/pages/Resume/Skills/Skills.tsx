@@ -15,7 +15,7 @@ export const Skills: React.FC<Props> = ({ skills }) => {
         <Row className="pb-3">
           <Col>
             <h2>
-              <span className={styles.blue}>SKILL</span>
+              <span className={styles.blue}>보유기술</span>
             </h2>
           </Col>
         </Row>

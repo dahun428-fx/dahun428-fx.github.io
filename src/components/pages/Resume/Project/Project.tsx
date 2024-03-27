@@ -37,7 +37,7 @@ const serialize = (payload: project): commonRow => {
 
 export const Project: React.FC<Props> = ({ projects }) => {
   return (
-    <CommonSection title="PROJECT">
+    <CommonSection title="프로젝트 사항">
       <EmptyRowCol>
         {projects &&
           projects.length > 0 &&

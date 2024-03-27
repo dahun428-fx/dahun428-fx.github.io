@@ -5,6 +5,8 @@ export interface commonRow {
   rightTitle?: string;
   rightSubTitle?: string;
   rightDescriptions?: description[];
+  rightSkillKeywords?: string[];
+  link?: string;
 }
 
 export interface description {

@@ -11,7 +11,12 @@ import { experienceData } from "@/data/experience/default";
 import { skills as skillData } from "@/data/skill/default";
 import { introduceData } from "@/data/introduce";
 import { educationData } from "@/data/education";
+import { portfolioData } from "@/data/portfolio";
+import { certificationData } from "@/data/certification";
+
 import { Education } from "./Education";
+import { SideProject } from "./SideProject";
+import { Certification } from "./Certification";
 
 export const Resume: React.FC = () => {
   return (
@@ -21,8 +26,10 @@ export const Resume: React.FC = () => {
       <Skills skills={skillData} />
       <Experience experiences={experienceData} />
       <Project projects={projectData} />
+      <SideProject portfolios={portfolioData} />
       <Education educations={educationData} />
-      <Footer />
+      <Certification certifications={certificationData} />
+      <Footer latestUpdatedAt={`2024-03-27`} />
     </div>
   );
 };

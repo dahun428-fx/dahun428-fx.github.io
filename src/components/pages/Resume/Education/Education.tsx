@@ -9,7 +9,7 @@ type Props = {
 
 export const Education: React.FC<Props> = ({ educations }) => {
   return (
-    <CommonSection title="EDUCATION">
+    <CommonSection title="학력사항 및 교육이수">
       <EmptyRowCol>
         {educations &&
           educations.length > 0 &&

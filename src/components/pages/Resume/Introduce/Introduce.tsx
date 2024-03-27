@@ -27,10 +27,10 @@ export const Introduce: React.FC<Props> = ({ introduceData }) => {
           contents.map((item, index) => {
             return <p key={index}>{item}</p>;
           })}
-        <p className="text-right">
+        {/* <p className="text-right">
           <small>Latest Updated </small>
           <Badge content={`${latestDate} (D+${latestFromNow})`} theme="secondary" size="h6" />
-        </p>
+        </p> */}
         {/* {sign && <p className={styles.sign}>{sign}</p>} */}
       </>
     </Contents>

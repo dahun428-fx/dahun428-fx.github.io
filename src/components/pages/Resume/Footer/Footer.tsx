@@ -3,9 +3,11 @@ import styles from "./Footer.module.scss";
 import classNames from "classnames";
 import { EmptyRowCol } from "@/components/ui/Common/EmptyRowCol";
 
-type Props = {};
+type Props = {
+  latestUpdatedAt: string;
+};
 
-export const Footer: React.FC<Props> = () => {
+export const Footer: React.FC<Props> = ({ latestUpdatedAt }) => {
   return (
     <Row>
       <Col className={styles.footerCover}>
@@ -14,7 +16,7 @@ export const Footer: React.FC<Props> = () => {
             <small>
               Created by JungDahun
               <br />
-              Final update Date : 2024-03-07
+              Final update Date : {latestUpdatedAt}
             </small>
           </EmptyRowCol>
         </div>
