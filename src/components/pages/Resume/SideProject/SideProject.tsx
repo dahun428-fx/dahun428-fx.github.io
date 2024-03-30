@@ -26,10 +26,9 @@ export const SideProject: React.FC<Props> = ({ portfolios }) => {
         {portfolios &&
           portfolios.length > 0 &&
           portfolios.map((item, index) => {
+            let portKey = `port_${index}`;
             return (
-              <>
-                <CommonRow key={index} row={serialize(item)} />
-              </>
+                <CommonRow key={portKey} row={serialize(item)} />
             );
           })}
       </EmptyRowCol>
