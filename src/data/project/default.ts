@@ -38,11 +38,13 @@ export const projectData: project[] = [
     descriptions: [
       {
         content: "성과",
-        descriptions: [{ content: "TSV 파일 데이터 송수신 기능 유틸화 건의 및 개발로 현업 추가 요구사항 10분 미만으로 신속하게 대응." }, { content: "협업 및 코드 리뷰 수행 시 리더 역할을 하여, 프로젝트 완료 예정일 보다 10일 빠르게 개발 완료. QA 시간 1주일 추가 확보로 테스트 케이스 500건 중 10건 미만의 버그 및 오류 수정" }, { content: "기능 개발 시, 사용자 입력 시 발생하는 딜레이타임을 RxJs 라이브러리 개발로 건의하여 해소. 웹 애플리케이션 성능 향상에 기여." }],
+        descriptions: [{ content: "AWS - Web 서버 간 Tsv 파일 데이터 송수신 기능 개발 및 util 화하여 추가 개발 시간 10분 미만으로 단축" },
+        { content: "jQuery - ajax 이슈로 발생하는 1초 딜레이를 RxJs Observer 사용, 0.1초로 최소화하여 UX 증대 ( 검색 창 추천 팝업 기능 개발 )" },
+         { content: "프로젝트 팀리더 ( PL ) 역할을 맡아, 소스코드 리뷰 및 업무 진척상황 체크 실시. 개발 기한 내에 프로젝트 완료." }],
       },
       {
         content: "역할",
-        descriptions: [{ content: "AWS 서버의 TSV 파일 데이터와 웹 서버 간 송수신 기능 개발" }, { content: "검색 창 추천 팝업 노출 기능 개발 및 유지보수. ( Redux / RxJs 라이브러리를 이용한 기능 개발로 Ajax 입력 딜레이타임 개선으로 사용자 경험 증대 기여 )" }, { content: "팀원 개발 진척 상황 전파 및 소스분석과 코드 리뷰 실시. 개발 시간 10일 단축으로 QA 집중, 버그 수정 시간 확보 및 소프트웨어 안정성 증가에 기여.( 6명의 팀원 / 총 9명 개발 팀 )" }],
+        descriptions: [{ content: "신규 팀원의 빠른 적응을 위해, 협업 툴/업무 로직/업무 가이드 문서 작성과 사내 교육 담당." }, { content: "개발 시 필요한 비즈니스 로직을 유틸화하여 개발 및 배포 수행" }, { content: "QA 시 필요한 테스트 케이스 문서 제작 및 팀 내 배포" }],
       },
       {
         content: "기술",
@@ -59,17 +61,14 @@ export const projectData: project[] = [
     descriptions: [
       {
         content: "성과",
-        descriptions: [{ content: "담당 파트 예정 공수 1개월 전 개발 완료. 마감기한 준수율 향상." }, { content: "유지보수가 용이하도록 개발하여 클라이언트 추가 요구사항에 1시간 이내로 대응" }, { content: "페이지 출력 시간 단축을 위해 PM에게 비동기 방식으로 변경을 건의. 해당 방식으로 페이지 출력시간 7초에서 3초로 단축하여 UX 향상." }, { content: "전체 기본동작확인 테스트 케이스 작성 및 배포를 실시. QA 시, 오류 및 버그 케이스 10% 미만으로 감소" }, { content: "Docker, Ubuntu, Node.js, PM2 관련 기술 습득 및 라우터에 대한 개념을 이해하고 프로젝트에 적용." }],
+        descriptions: [{ content: "이미지 Lazy-Loading, GA 필요 데이터 출력 비동기화 등을 통하여 페이지 출력시간을 7초에서 3초로 단축하여 UX 향상" }, { content: "화면 개발 시 PHP - jQuery - ajax 을 이용한 비동기 방식으로 페이지를 개발하여 페이지 로딩 최소화 ( CRUD / 검색 기능 구현 )" }, { content: "개발 함수들을 캡슐화하여 클라이언트 추가 요구사항에 빠르게 개발하여 마감기한 준수율 향상 및 소프트웨어 유지보수 효율성 향상" }],
       },
       {
         content: "역할",
         descriptions: [
-          { content: "마이페이지의 문의, 리뷰, 쿠폰, 장바구니 게시판 개발 및 구현" },
-          { content: "문의, 리뷰게시판 백엔드 서버(Node.js)를 Restful API 방식으로 개발 및 구현" },
-          { content: "Adobe Analystic (AA) 및 이미지 출력 시 페이지 출력 시간이 7초 이상으로 지연됨을 파악하고 비동기 전환을 건의하여 페이지 출력 시간 3초로 감소. UX 향상." },
-          {
-            content: "담당 파트 개발 완료 후 전체 테스트 케이스를 직접 작성하여 팀원들에게 배포. 기본동작확인 방법을 면밀히 작성하여 최대한 오류 및 버그 감소에 기여. 현업 자체 검사 시 버그 건을 10% 미만 준수",
-          },
+          { content: "프론트엔드 - Docker + Ubuntu + PHP + jQuery 을 활용하여 Mypage : 문의 / 리뷰 / 쿠폰 게시판 개발 및 구현" },
+          { content: "백엔드 - AWS + Node.js + MySQL 로 문의게시판, 리뷰게시판의 Restful api 서버 구축 및 배포" },
+          { content: "Adobe Analystic (AA) / Google Analystic (GA) 웹페이지 적용" },
         ],
       },
       {
