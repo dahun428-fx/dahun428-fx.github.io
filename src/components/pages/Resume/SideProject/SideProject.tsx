@@ -10,12 +10,13 @@ type Props = {
 
 export const SideProject: React.FC<Props> = ({ portfolios }) => {
   const serialize = (payload: portfolio): commonRow => {
-    const { index, title, descriptions, link, skillKeywords } = payload;
+    const { index, title, descriptions, link, link2,skillKeywords } = payload;
     return {
       index,
       leftTitle: title,
       rightDescriptions: descriptions,
       link: link,
+      link2: link2,
       rightSkillKeywords: skillKeywords,
     };
   };
