@@ -6,7 +6,7 @@ export const experienceData: experience[] = [
     position: "개발팀 프론트엔드 / 백엔드 개발자",
     startedAt: "2021-04",
     // endedAt: "2024-04",
-    descriptions: ["B to B 온라인 쇼핑몰", "신규 개발 건 풀스택 개발 ( 8명 개발팀 )", "기존 프론트/백엔드 유지보수", "Next.js, React.js 고도화 PL급 팀원 ( 12명 개발팀 )"],
+    descriptions: ["B to B 온라인 쇼핑몰", "마이페이지 신규 개발 건 풀스택 개발 ( 8명 개발팀 )", "프론트 (jQuery) / 백엔드 (PHP) 유지보수", "Next.js / React.js 고도화 PL급 팀원 ( 12명 개발팀 )"],
     skillKeywords: ["PHP", "javascript", "RxJs", "Node.js", "React.js", "Next.js", "AWS", "Ubuntu (Linux)", "Jira", "Jenkins", "Git"],
   },
   {

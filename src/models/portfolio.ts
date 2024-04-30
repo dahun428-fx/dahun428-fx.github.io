@@ -5,5 +5,6 @@ export interface portfolio {
   title: string;
   descriptions?: description[];
   link?: string;
+  link2?:string;
   skillKeywords?: string[];
 }

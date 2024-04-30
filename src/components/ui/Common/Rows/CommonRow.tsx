@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const CommonRow: React.FC<Props> = ({ row }) => {
-  const { index, leftTitle, leftSubTitle, rightDescriptions, rightSubTitle, rightTitle, rightSkillKeywords, link } = row;
+  const { index, leftTitle, leftSubTitle, rightDescriptions, rightSubTitle, rightTitle, rightSkillKeywords, link, link2 } = row;
   const option = {
     padding: !!(rightTitle || rightSubTitle),
   };
@@ -33,9 +33,19 @@ export const CommonRow: React.FC<Props> = ({ row }) => {
           {rightTitle && <h4>{rightTitle}</h4>}
           {rightSubTitle && <i className={styles.gray}>{rightSubTitle}</i>}
           {link && (
-            <a href={link} target="_blank">
-              {link}
-            </a>
+            <div>
+              <a href={link} target="_blank">
+                {link}
+              </a>
+            </div>
+          )}
+
+          {link2 && (
+            <div>
+              <a href={link2} target="_blank">
+                {link2}
+              </a>
+            </div>
           )}
           {rightDescriptions && <CommonDescription descriptions={rightDescriptions} option={option} key={`${index}_${id}`} index={index} />}
           {rightSkillKeywords && rightSkillKeywords.length > 0 && (

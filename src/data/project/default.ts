@@ -1,5 +1,12 @@
 import { project } from "@/models/project";
 
+/**
+ * 기존 웹페이지 ( php, jQuery) 를 React.js, Next.js, Redux 기술로 리뉴얼 프로젝트에 팀원으로 참여.
+기획자가 설계한 API 인터페이스를 구현하고, Storybook, scss 를 활용하여 UI 컴포넌트 구현.
+프로젝트 투입 전 React.js 기술 공부 1년 수행으로 실무 투입 시에 복잡한 기술 구현에 참여하여 프로젝트 완성도에 기여.
+팀 내 초급자 팀원 5명에게 기술적 조언을 제공하고 코드 리뷰를 실시하여 프로젝트의 유지보수 용이성 및 코드 품질 향상에 기여함.
+
+ */
 export const projectData: project[] = [
   {
     index: 0,
@@ -9,15 +16,16 @@ export const projectData: project[] = [
     descriptions: [
       {
         content: "성과",
-        descriptions: [{ content: "기존의 스파게티 코드로 되어있던 복잡한 구조의 페이지를 개선" }, { content: "SEO 기반 메타태그 설정 개발 및 GA (Google Analytics) 및 AA (Adobe Analytics) 웹 페이지에 적용" }, { content: "설계자가 설계한 API 인터페이스를 구현하고, storybook 및 scss를 활용하여 UI 컴포넌트를 구현함." }, { content: "팀 내 다른 팀원 5명에게 기술적 조언을 제공하고 코드 리뷰를 실시하여 프로그램 코드 품질 향상에 기여함." }],
+        descriptions: [{ content: "React.js 를 개인 프로젝트 공부로 꾸준히 학습하여, 실무 투입 시에 복잡한 기술 구현에 참여하여 프로젝트 완성도에 기여." }, { content: "팀 내 초급자 팀원 5명에게 기술적 조언을 제공하고 코드 리뷰를 실시하여 프로젝트의 유지보수 용이성 및 코드 품질 향상에 기여." }],
       },
       {
         content: "역할",
-        descriptions: [{ content: "React.js 기술 공부를 개인적으로 1년 꾸준히 실시하여, 실제 프로젝트 투입 시 프로젝트의 복잡한 기술구현을 수행하여 프로젝트 완성도에 기여. ( 멀티다운로드 기능, 상품 비교 팝업 구현 )" }, { content: "팀 내 팀원 5명에게 기술적인 조언을 제공하고 코드 리뷰 실시" }, { content: "설계자가 설계한 API 인터페이스를 구현하고, stroybook 및 scss를 활용하여 UI 컴포넌트를 구현." }],
+        descriptions: [
+          { content: "기존 웹페이지 ( php, jQuery) 를 React.js, Next.js, Redux 기술로 리뉴얼 프로젝트에 팀원으로 참여" }, { content: "기획자가 설계한 API 인터페이스를 구현하고, Storybook, scss 를 활용하여 UI 컴포넌트 구현." }],
       },
       {
         content: "기술",
-        descriptions: [{ content: "React.js, Next.js" }, { content: "TypeScript, Sass, i18next, JWT token" }, { content: "Redux 상태 관리" }, { content: "Restful API 통신 및 인터페이스 구현" }, { content: "Storybook 및 scss를 활용한 UI 컴포넌트 구현" }, { content: "Google Analytics 및 Adobe Analytics 태그 적용" }],
+        descriptions: [{ content: "React.js, Next.js. TypeScript" }, { content: "Redux 상태 관리" }, { content: "Restful API 통신 및 인터페이스 구현" }, { content: "Storybook 및 scss를 활용한 UI 컴포넌트 구현" }, { content: "Google Analytics 및 Adobe Analytics 태그 적용" }],
       },
     ],
   },
@@ -30,15 +38,17 @@ export const projectData: project[] = [
     descriptions: [
       {
         content: "성과",
-        descriptions: [{ content: "TSV 파일 데이터 송수신 기능 유틸화 건의 및 개발로 현업 추가 요구사항 10분 미만으로 신속하게 대응." }, { content: "PL 역할을 수행하여 프로젝트 완료 예정일 보다 10일 빠르게 개발 완료. QA 시간 1주일 추가 확보로 테스트 케이스 500건 중 10건 미만의 버그 및 오류 수정" }, { content: "사용자 입력시 발생하는 1초 딜레이타임을 Redux 도입으로 해소하여 웹애플리케이션 성능 향상에 기여." }],
+        descriptions: [{ content: "AWS - Web 서버 간 Tsv 파일 데이터 송수신 기능 개발 및 util 화하여 추가 개발 시간 10분 미만으로 단축" },
+        { content: "jQuery - ajax 이슈로 발생하는 1초 딜레이를 RxJs Observer 사용, 0.1초로 최소화하여 UX 증대 ( 검색 창 추천 팝업 기능 개발 )" },
+         { content: "프로젝트 팀리더 ( PL ) 역할을 맡아, 소스코드 리뷰 및 업무 진척상황 체크 실시. 개발 기한 내에 프로젝트 완료." }],
       },
       {
         content: "역할",
-        descriptions: [{ content: "AWS 서버의 TSV 파일 데이터와 웹 서버 간 송수신 기능 개발 및 유틸화." }, { content: "검색 창 추천 팝업 노출 기능 개발 시, 단순 Ajax 비동기식으로 사용할 때 발생하는 입력 딜레이 타임을 개선. Redux 와 RxJs 사용하여 개발하여 웹 애플리케이션 사용자 경험 증가에 기여." }, { content: "총 9명의 개발 팀 중 6명의 팀원을 맡아 PL 역할을 수행. 3명의 개발 진척 상황 및 코드리뷰, 소스분석 조언을 통해 기존 개발 완료시간 보다 10일 빠르게 완료할 수 있었음. QA 시간을 더 확보하여 현업이 제시한 테스트 케이스 중 버그 발견 2%. 버그 수정 시간 확보 및 소프트웨어 안정성 증가에 기여." }],
+        descriptions: [{ content: "신규 팀원의 빠른 적응을 위해, 협업 툴/업무 로직/업무 가이드 문서 작성과 사내 교육 담당." }, { content: "개발 시 필요한 비즈니스 로직을 유틸화하여 개발 및 배포 수행" }, { content: "QA 시 필요한 테스트 케이스 문서 제작 및 팀 내 배포" }],
       },
       {
         content: "기술",
-        descriptions: [{ content: "프론트엔드 기술 - RxJs 라이브러리, Redux, jQuery, Stylus, ajax" }],
+        descriptions: [{ content: "프론트엔드 - RxJs 라이브러리, Redux, jQuery, Stylus, ajax" }],
       },
     ],
   },
@@ -51,17 +61,14 @@ export const projectData: project[] = [
     descriptions: [
       {
         content: "성과",
-        descriptions: [{ content: "담당 파트 예정 공수 1개월 전 개발 완료. 마감기한 준수율 향상." }, { content: "유지보수가 용이하도록 개발하여 클라이언트 추가 요구사항에 1시간 이내로 대응" }, { content: "페이지 출력 시간 단축을 위해 PM에게 비동기 방식으로 변경을 건의. 해당 방식으로 페이지 출력시간 7초에서 3초로 단축하여 UX 향상." }, { content: "전체 기본동작확인 테스트 케이스 작성 및 배포를 실시하여 QA 시에, 오류 및 버그 케이스 10% 미만으로 감소" }, { content: "Docker, Ubuntu, Node.js, PM2 관련 기술 습득 및 라우터에 대한 개념을 이해하고 프로젝트에 적용." }],
+        descriptions: [{ content: "이미지 Lazy-Loading, GA 필요 데이터 출력 비동기화 등을 통하여 페이지 출력시간을 7초에서 3초로 단축하여 UX 향상" }, { content: "화면 개발 시 PHP - jQuery - ajax 을 이용한 비동기 방식으로 페이지를 개발하여 페이지 로딩 최소화 ( CRUD / 검색 기능 구현 )" }, { content: "개발 함수들을 캡슐화하여 클라이언트 추가 요구사항에 빠르게 개발하여 마감기한 준수율 향상 및 소프트웨어 유지보수 효율성 향상" }],
       },
       {
         content: "역할",
         descriptions: [
-          { content: "문의, 리뷰, 쿠폰, 장바구니 게시판 개발 및 구현" },
-          { content: "문의, 리뷰게시판 백엔드 서버(Node.js)를 Restful API 방식으로 개발 및 구현" },
-          { content: "Adobe Analystic (AA) 및 이미지 출력 시 페이지 출력 시간이 7초 이상으로 지연됨을 파악하고 비동기 전환을 건의하여 페이지 출력 시간 3초로 감소. UX 향상." },
-          {
-            content: "지속적인 테스트 및 버그 수정을 위해 마이페이지의 테스트 케이스를 직접 작성하여 팀원들에게 배포하였음. 기본동작확인 방법을 면밀히 작성하여 최대한 오류 및 버그 감소를 하여, 현업 자체 검사 시 버그 건을 10% 미만으로 하여 빠르게 해당 사이트를 오픈 할 수 있었음.",
-          },
+          { content: "프론트엔드 - Docker + Ubuntu + PHP + jQuery 을 활용하여 Mypage : 문의 / 리뷰 / 쿠폰 게시판 개발 및 구현" },
+          { content: "백엔드 - AWS + Node.js + MySQL 로 문의게시판, 리뷰게시판의 Restful api 서버 구축 및 배포" },
+          { content: "Adobe Analystic (AA) / Google Analystic (GA) 웹페이지 적용" },
         ],
       },
       {
