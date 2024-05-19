@@ -136,7 +136,7 @@ export const projectData: project[] = [
       },
       {
         content: "기술",
-        descriptions: [{ content: "HP / JavaScript / stylus CSS / RESTFul API / SourceTree / Git / Docker / Ubuntu" }],
+        descriptions: [{ content: "PHP / JavaScript / stylus CSS / RESTFul API / SourceTree / Git / Docker / Ubuntu" }],
       },
     ],
   },
